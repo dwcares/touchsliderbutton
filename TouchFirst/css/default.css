@@ -1,0 +1,107 @@
+﻿body {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+}
+
+.loremText {
+    -ms-grid-column: 1;
+    padding: 20px;
+    color: darkgray;
+    font: normal 16pt 'Segoe UI';
+    overflow-y: scroll;
+}
+
+.sliderButton {
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr;
+    -ms-grid-row-align: end;
+    -ms-grid-column-align: end;
+    margin: 100px;
+    -ms-grid-column: 2;
+}
+
+.roundButton {
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    background-color: #0077c6;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px 30px;
+    opacity: 0.99;
+    transition: transform ease-in-out 200ms, color ease 100ms;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr;
+    font-size: 16pt;
+    color: white;
+}
+
+.roundDest {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px 30px;
+    opacity: 0.4;
+    border: 2px solid #70ad47;
+    -ms-grid-column-align: center;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr;
+    transition: transform ease-in-out 100ms 0ms;
+    color: #70ad47;
+    font-size: 20pt;
+}
+
+    .roundDest.top {
+        -ms-grid-row-align: start;
+        transform: translateY(70px);
+    }
+
+    .roundDest.bottom {
+        transform: translateY(-70px);
+        -ms-grid-row-align: end;
+    }
+
+.buttonLabel {
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    font-family: 'Segoe UI SemiBold';
+
+}
+
+.slideContainer {
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
+    width: 70px;
+    height: 204px;
+    opacity: 0;
+    transition: opacity 0.2s ease 0s;
+    display: -ms-grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr;
+}
+
+.on .roundButton {
+    background-color: #6fa7cc;
+    transition-duration: 0ms;
+}
+
+.roundButton.commit {
+    background-color: #70ad47;
+}
+
+.on .slideContainer {
+    opacity: 1;
+    transition: opacity 0.2s ease 400ms;
+}
+
+.on .roundDest.top {
+    transform: translateY(0px);
+    transition: transform ease-in-out 200ms 400ms;
+}
+
+.on .roundDest.bottom {
+    transform: translateY(0px);
+    transition: transform ease-in-out 200ms 400ms;
+}
